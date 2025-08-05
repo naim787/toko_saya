@@ -55,9 +55,8 @@
         <span>Mulai jualan sekarang dan nikmati kemudahan tanpa batas!</span>
       </div>
 
-      <a href="https://wa.me/62895352455400?text=saya%20iggin%20mendaftar%20ka%F0%9F%98%81" target="_blank" rel="noopener noreferrer" class=""><button class="btn btn-primary text-white">Get Started</button></a>
+      <a href="https://wa.me/6289352455400?text=saya%20iggin%20mendaftar%20ka%F0%9F%98%81" target="_blank" rel="noopener noreferrer" class=""><button class="btn btn-primary text-white">Get Started</button></a>
       <a href="/demo" class=""><button class="btn">Live Demo</button></a>
     </div>
   </div>
 </div>
-
