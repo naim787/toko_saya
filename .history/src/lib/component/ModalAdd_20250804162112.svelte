@@ -1,0 +1,33 @@
+ <script>
+  export let dt;
+ </script>
+ 
+ <dialog id="my_modal_3" class="modal backdrop-blur">
+      <div class="modal-box w-[95%] h-[95%] bg-white p-[0] rounded-md">
+        <!-- close -->
+        <form method="dialog" class="absolute top-0 right-0">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-0 top-0 p-[1px] bg-white">✕</button>
+        </form>
+        
+        <img src="./spatu.jpg" alt="" class="w-full h-[40%] rounded-t-md object-cover"/>
+
+        <div class="w-full h-auto px-4">
+          <div class="font-syerif">
+            <h1 class="text-2xl font-bold">Lorem ipsum dolor</h1>
+            <p class="text-grey-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat tempore repellendus maiores quo voluptates beatae.</p>
+            <div class="w-full flex flex-col">
+              <p class="font-bold">Size:</p>
+              <div class="w-full flex flex-wrap">
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+                <button class=" btn px-3 bg-gray-700 text-white rounded-md m-1">XL</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</dialog>

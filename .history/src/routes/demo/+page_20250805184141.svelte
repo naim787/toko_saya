@@ -1,0 +1,51 @@
+<script>
+  import "../../app.css"
+	import NavClient from '$lib/component/NavClient.svelte';
+  import DisCount from '$lib/component/DisCount.svelte';
+  import Category from "$lib/component/Category.svelte";
+  import ViewCategory from "$lib/component/ViewCategory.svelte";
+  import WrCard from "$lib/component/WrCard.svelte";
+  import {GetModels} from "$lib/component/Models.js";
+  
+  let modelClass = new GetModels();
+  let model = new modelClass();
+
+  // Set properti
+  model.id = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+  model.name = "TOKO SAYA";
+  model.discon = "diskon 50% bisa cod kapan saja yang kalian mau";
+  model.disconURL = "./a.png";
+  model.noTelp = "62895352455400";
+  model.products = [
+    {name: "Rolex", price: 12000, image: "https://www.frostnyc.com/cdn/shop/products/RD_1.2_586801d8-4fd4-4953-a226-4cca7ab18fd4_600x.jpg?v=1742234698", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["yellow-500", "black"], size: ["28–34 mm", "35–38 mm", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+    {name: "Sepatu Jordan Garda", price: 12000, image: "./spatu.jpg", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["red", "blue", "green", "yellow"], size: ["S", "M", "L", "XL", "XXL"]},
+  ]
+</script>
+
+
+<NavClient name={model.name}/>
+<div class="w-[100vw] h-auto flex flex-col justify-start items-center p-4 overflow-x-hidden font-mono bg-gradient-to-br from-blue-100 via-white to-purple-100">
+
+	<!-- content discont -->
+	<DisCount discon={model.discon} url={model.disconURL}/>
+
+  <!-- category -->
+   <Category />
+
+  <!-- view category -->
+  <ViewCategory />
+
+  <!-- wrap card -->
+   <WrCard data={model.products} noTelp={model.noTelp} />
+
+</div>

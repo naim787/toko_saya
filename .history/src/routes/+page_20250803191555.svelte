@@ -1,0 +1,93 @@
+<script>
+	import { AlignLeft, Bell, Search } from "@lucide/svelte";
+	import "../app.css"
+</script>
+
+<div class="navbar bg-base-100 shadow-sm font-mono fixed top-0 left-0 z-50">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <AlignLeft />
+      </div>
+      <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+      <ul tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/">Portfolio</a></li>
+        <li><a href="/">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-center">
+    <h1 class="text-xl font-bold">TOKO SAYA</h1>
+  </div>
+  <div class="navbar-end">
+    <button class="btn btn-ghost btn-circle">
+      <Search />
+    </button>
+    <button class="btn btn-ghost btn-circle">
+      <div class="indicator">
+       <Bell />
+        <span class="badge badge-xs bg-green-500 indicator-item"></span>
+      </div>
+    </button>
+  </div>
+</div>
+
+<div class="w-[100vw] h-auto flex flex-col justify-start items-center p-4 overflow-x-hidden font-mono">
+
+	<!-- content discont -->
+	<div class="w-[95%] h-[130px] bg-black rounded-xl flex justify-evenly items-center p-3 mt-[10vh]">
+		<div class="">
+			<h1 class="text-white font-[10] text-md p-3">diskon <span class="text-green-500 text-xl font-bold">50%</span>, bisa cod kapan saja yang kalian mau</h1>
+		</div>
+		<img src="./a.png" alt="spatu" loading="lazy" class="w-35 h-35 object-cover"/>
+	</div>
+
+  <!-- category -->
+	<div class="w-[95%] flex justify-between items-start p-2 xl:p-4">
+		<h1 class="font-bold">Category</h1>
+		<h1 class="font-thin">View all</h1>
+	</div>
+
+  <!-- view category -->
+  <div class="w-[95%] flex justify-between items-start p-2 xl:p-4">
+    <div class="w-10 h-10 bg-gray-500 rounded-xl"></div>
+    <div class="w-10 h-10 bg-gray-500 rounded-xl"></div>
+    <div class="w-10 h-10 bg-gray-500 rounded-xl"></div>
+    <div class="w-10 h-10 bg-gray-500 rounded-xl"></div>
+  </div>
+
+  <!-- wrap card -->
+ <div class="w-[100vw] h-[100vh] flex flex-wrap justify-evenly items-start overflow-y-scroll">
+  
+  {#each Array(10) as _, i}
+  <!-- card -->
+   <div class="card bg-base-100 w-83 h-85 shadow-xl p-2 flex flex-col bg-gray-100 m-1">
+      <img src="spatu.jpg" alt="Shoes" class="w-80 h-50 rounded-xl object-cover mx-auto" />
+      <h1 class="font-bold text-2xl">Title Name</h1>
+      <div class="w-80 mx-auto flex justify-between items-center">
+        <h1 class="text-green-500 font-bold">Rp:15000</h1>
+        <h1 class="px-2 border rounded-xl border-red-500 text-red-500">50%</h1>
+      </div>
+      <p class="font-thin text-gray-500">Lorem ipsum dolor sit amet.</p>
+      <div class="w-45 my-auto">
+                <!-- You can open the modal using ID.showModal() method -->
+              <button class="btn" on:click={() => document.getElementById('my_modal_3').showModal()}>A</button>
+              <dialog id="my_modal_3" class="modal">
+          <div class="modal-box">
+            <form method="dialog">
+              <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click on ✕ button to close</p>
+          </div>
+        </dialog>
+      </div>
+   </div>
+  
+  {/each}
+
+  </div>
+
+</div>
