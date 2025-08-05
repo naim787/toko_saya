@@ -13,8 +13,8 @@
   // Set properti
   model.id = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
   model.name = "TOKO SAYA";
-  model.discon = "diskon 90% bisa cod kapan saja yang kalian mau";
-  model.disconURL = "https://images.tokopedia.net/img/cache/850/BgtCLw/2020/12/10/87a02360-522b-45e7-9a93-1395be178e7e.jpg?ect=4g";
+  model.discon = "diskon 50% bisa cod kapan saja yang kalian mau";
+  model.disconURL = "https://images.pexels.com/photos/12698025/pexels-photo-12698025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
   model.noTelp = "62895352455400";
   model.products = [
     {name: "Rolex Submariner", price: 12000, image: "https://www.frostnyc.com/cdn/shop/products/RD_1.2_586801d8-4fd4-4953-a226-4cca7ab18fd4_600x.jpg?v=1742234698", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa", color: ["yellow-500", "black"], size: ["28–34 mm", "35–38 mm", "39–42 mm", "43–46 mm"]},

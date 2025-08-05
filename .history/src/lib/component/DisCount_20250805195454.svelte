@@ -7,5 +7,5 @@
     <div class="">
         <h1 class="text-white font-[10] text-md p-3">{discon}</h1>
     </div>
-    <img src={url} alt="spatu" loading="lazy" class="w-auto h-35 object-cover"/>
+    <img src={url} alt="spatu" loading="lazy" class="w-35 h-35 object-cover"/>
 </div>
